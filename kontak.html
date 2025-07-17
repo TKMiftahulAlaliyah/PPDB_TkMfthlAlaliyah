@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - TK Miftahul Alaliyah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="logo">TK Miftahul Alaliyah</div>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="visi-misi.html">Visi Misi</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pendaftaran.html">Pendaftaran</a></li>
+      <li><a href="kontak.html" class="active">Kontak</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+   <header style="background-color:  #fff5cc;; color: black; padding: 15px; display: flex; align-items: center; border-bottom: 4px solid #ffc107; border-radius: 15px; ">
+    <img src="logo_tk.png" alt="Logo TK" style="height: 50px; margin-right: 15px;">
+    <div>
+        <h2 style="margin: 0;">Hubungi Kami</h2>
+        <p style="margin: 0;">Jangan ragu untuk bertanya atau menghubungi kami melalui form atau kontak di bawah ini.</p>
+    </div>
+</header> <br>
+
+    <section class="intro">
+      <h3>Informasi Kontak</h3>
+      <p><strong>Alamat:</strong> Jl. Sultan Hasanudin Kp. Pisangan Simpang 4, Rt. 006/001, Ds. Kayu Agung, Kec. Sepatan, Kab. Tangerang, Prov. Banten, Kode POS: 15520</p>
+      <p><strong>Telepon:</strong> 0896-7389-1854</p>
+      <p><strong>Email:</strong> tk.miftahudin@yahoo.com</p>
+      <p><strong>Jam Operasional:</strong> Senin - Jumat, 07.00 - 12.00 WIB</p>
+    </section>
+
+   <form class="form-daftar" action="https://formspree.io/f/xeozoevg" method="POST">
+  <label>Nama Anda</label>
+  <input type="text" name="nama" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Subjek</label>
+  <input type="text" name="subjek" required>
+
+  <label>Pesan</label>
+  <textarea name="pesan" rows="4" required></textarea>
+
+  <!-- Redirect ke halaman terima kasih setelah kirim -->
+  <input type="hidden" name="_redirect" value="terimakasih.html">
+
+  <div class="form-buttons">
+    <button type="submit">Kirim Pesan</button>
+    <button type="reset" class="reset">Reset</button>
+  </div>
+</form>
+
+
+    <footer class="footer">
+      <p>&copy; 2025 TK Miftahul Alaliyah. Seluruh hak cipta dilindungi.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function kontakKirim() {
+      alert("Pesan berhasil dikirim! (simulasi saja)");
+      return false;
+    }
+  </script>
+</body>
+</html>

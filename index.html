@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - TK Miftahul Alaliyah</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .testimoni-container {
+      background-color: #fffde7;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .testimoni-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #5d4037;
+    }
+
+    .testimoni-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .testimoni-item {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      background: #fff8e1;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .testimoni-rating {
+      font-size: 18px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .testimoni-item p {
+      font-size: 15px;
+      color: #4e342e;
+    }
+
+    .testimoni-nama {
+      font-weight: bold;
+      color: #6d4c41;
+      margin-top: 10px;
+    }
+
+    .daftar-sekarang {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn-daftar {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+.btn-daftar:hover {
+  background: linear-gradient(45deg, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+/* Animasi lucu berdenyut */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+  </style>
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="logo">TK Miftahul Alaliyah</div>
+    <ul>
+      <li><a href="index.html" class="active">Dashboard</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="sop.html">SOP</a></li>
+      <li><a href="visi-misi.html">Visi Misi</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pendaftaran.html">Pendaftaran</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Header -->
+    <header style="background-color: #fff5cc; color: black; padding: 15px; display: flex; align-items: center; border-bottom: 4px solid #ffc107; border-radius: 15px;">
+      <img src="logo_tk.png" alt="Logo TK" style="height: 50px; margin-right: 15px;">
+      <div>
+        <h2 style="margin: 0;">Selamat Datang di TK Miftahul Alaliyah</h2>
+        <p style="margin: 0;">Mendidik dengan kasih sayang, membentuk karakter ceria sejak dini.</p>
+      </div>
+    </header>
+
+    <br>
+
+    <!-- Gambar utama -->
+    <img src="foto tk.jpg" class="hero-img" alt="Tk Miftahul Alaliyah" />
+
+    <!-- Ringkasan Info -->
+    <section class="info-cards">
+      <div class="card">
+        <h2>18+</h2>
+        <p>Siswa Aktif Tahun Ajaran 2025</p>
+      </div>
+      <div class="card">
+        <h2>3</h2>
+        <p>Guru Pengajar</p>
+      </div>
+      <div class="card">
+        <h2>2016</h2>
+        <p>Tahun Berdiri</p>
+      </div>
+    </section>
+
+    <!-- Penjelasan -->
+    <section class="intro">
+      <h3>Mengapa Memilih TK Miftahul Alaliyah?</h3>
+      <p>
+        TK Miftahul Alaliyah berkomitmen untuk menciptakan lingkungan belajar yang menyenangkan dan edukatif
+        melalui pendekatan bermain, seni, dan nilai-nilai Islami.
+      </p>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="testimoni-container">
+      <h2 class="testimoni-title">Testimoni Orang Tua Murid</h2>
+      <div class="testimoni-carousel" id="testimoniCarousel">
+
+        <!-- Testimoni #1 -->
+        <div class="testimoni-item">
+          <div class="testimoni-rating">⭐⭐⭐⭐⭐</div>
+          <p>Anak saya sangat senang belajar di sini. Lingkungannya Islami dan menyenangkan.</p>
+          <div class="testimoni-nama">– Ibu Siti, orang tua dari Aisyah</div>
+        </div>
+
+        <!-- Testimoni lainnya -->
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐</div><p>Guru-gurunya sabar dan perhatian. Banyak kegiatan menarik untuk anak-anak.</p><div class="testimoni-nama">– Bapak Ahmad, orang tua dari Fajar</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐⭐</div><p>TK ini sangat saya rekomendasikan. Anak saya jadi lebih mandiri dan rajin sholat.</p><div class="testimoni-nama">– Ibu Lestari, orang tua dari Zahra</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐</div><p>Program belajarnya bagus dan seimbang antara akademik dan keislaman.</p><div class="testimoni-nama">– Bapak Ridwan, orang tua dari Farhan</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐⭐</div><p>Lingkungan sekolah sangat bersih dan aman untuk anak-anak.</p><div class="testimoni-nama">– Ibu Ningsih, orang tua dari Rania</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐</div><p>Kegiatan rutin seperti hafalan dan praktik ibadah sangat membantu perkembangan anak.</p><div class="testimoni-nama">– Pak Udin, orang tua dari Ilham</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐⭐</div><p>Anak saya lebih cepat belajar membaca dan menulis di TK ini.</p><div class="testimoni-nama">– Bu Ani, orang tua dari Tania</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐</div><p>Pendaftaran mudah dan pelayanan admin sangat ramah.</p><div class="testimoni-nama">– Pak Budi, orang tua dari Zaki</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐⭐</div><p>Saya puas sekali. Anak-anak diajarkan akhlak dan sopan santun sejak dini.</p><div class="testimoni-nama">– Ibu Sarah, orang tua dari Hana</div></div>
+        <div class="testimoni-item"><div class="testimoni-rating">⭐⭐⭐⭐</div><p>Metode pembelajaran yang kreatif dan menyenangkan.</p><div class="testimoni-nama">– Bapak Ali, orang tua dari Rayyan</div></div>
+      </div>
+    </section>
+
+<div class="daftar-sekarang">
+  <a href="pendaftaran.html" class="btn-daftar">
+    🎒 Daftar Sekarang!
+  </a>
+</div>
+
+<!-- Bagian HTML Berita -->
+<section class="berita-terbaru">
+  <h2>📰 Berita Terbaru</h2>
+  <div class="blog-container">
+    
+    <div class="blog-item">
+      <h3>Belum Ada Berita Terbaru</h3>
+      <p><small>Unknown News</small></p>
+      <!-- <p>Pendaftaran santri baru tahun ajaran 2025/2026 resmi dibuka! Segera daftarkan putra/putri Anda melalui laman <a href="pendaftaran.html">pendaftaran</a>.</p> -->
+       <p> Silakan cek kembali di lain waktu</p>
+    </div>
+
+    <!-- <div class="blog-item">
+      <h3>Belum Ada Berita Terbaru</h3>
+      <p><small>Unknown News</small></p>
+      <p>Kurikulum terbaru kini memuat pelajaran tambahan Tahfidz dan Literasi Digital untuk mendukung perkembangan zaman dan karakter anak islami.</p> 
+    </div>
+
+    <div class="blog-item">
+      <h3>Belum Ada Berita Terbaru</h3>
+      <p><small>Unknown News</small></p>
+      <p>Para santri mengikuti kegiatan belajar di luar ruangan yang menyenangkan dan edukatif ke Taman Edukasi Bandung.</p> 
+    </div> -->
+
+  </div>
+</section>
+
+<!-- Tambahkan CSS-nya -->
+<style>
+.berita-terbaru {
+  background-color: #fef8f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.berita-terbaru h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #d35400;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.blog-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+}
+
+.blog-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  font-size: 14px;
+  color: #555;
+}
+</style>
+
+
+    <!-- Tata Tertib -->
+    <section class="tata-tertib" style="background-color: #fff0f5; padding: 20px; border-radius: 15px; margin-top: 30px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+      <h3 style="text-align: center; color: #d63384;">📚 Tata Tertib Anak Didik</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>👕 Siswa memakai seragam sesuai peraturan sekolah.</li>
+        <li>🚫 Wali murid tidak boleh masuk ke kelas saat proses belajar mengajar.</li>
+        <li>📞 Bila tidak masuk, wajib beri tahu guru atau kepala sekolah.</li>
+        <li>🍱 Siswa wajib membawa bekal/snack dari rumah.</li>
+        <li>🧸 Siswa wajib kembalikan alat main ke tempatnya.</li>
+        <li>⏰ Datang tepat waktu; lepas sepatu & letakkan tas di tempatnya.</li>
+      </ul>
+      <p style="text-align: right; font-style: italic; margin-top: 20px;">
+        <strong>Mengetahui,</strong><br />
+        Kepala TK Miftahul Alaliyah<br />
+        <em>Hj. Hikmawati, S.Pd</em>
+      </p>
+    </section> <br>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 TK Miftahul Alaliyah. Seluruh hak cipta dilindungi.</p>
+    </footer>
+  </div>
+
+  <!-- Auto scroll testimonial -->
+  <script>
+    const carousel = document.getElementById('testimoniCarousel');
+    setInterval(() => {
+      carousel.scrollBy({ left: 320, behavior: 'smooth' });
+      if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, 5000);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

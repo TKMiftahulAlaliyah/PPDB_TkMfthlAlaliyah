@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pendaftaran - TK Miftahul Alaliyah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="logo">TK Miftahul Alaliyah</div>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="visi-misi.html">Visi Misi</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pendaftaran.html" class="active">Pendaftaran</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="content">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Header -->
+    <header style="background-color: #fff5cc; color: black; padding: 15px; display: flex; align-items: center; border-bottom: 4px solid #ffc107; border-radius: 15px;">
+      <img src="logo_tk.png" alt="Logo TK" style="height: 50px; margin-right: 15px;">
+      <div>
+        <h2 style="margin: 0;">Formulir Pendaftaran</h2>
+        <p style="margin: 0;">Silakan isi data anak Anda untuk pendaftaran di TK Miftahul Alaliyah.</p>
+      </div>
+    </header>
+
+    <br>
+
+    <!-- Formulir Pendaftaran -->
+    <form class="form-daftar" action="https://formspree.io/f/xovlvjpw" method="POST" onsubmit="return validateForm()">
+      <label>Nama Lengkap Anak</label>
+      <input type="text" name="nama" required>
+
+      <label>Tanggal Lahir</label>
+      <input type="date" name="tgl_lahir" required>
+
+      <label>Jenis Kelamin</label>
+      <select name="jk" required>
+        <option value="">-- Pilih --</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label>Alamat</label>
+      <textarea name="alamat" rows="3" required></textarea>
+
+      <label>No NIK Anak (pendaftar)</label>
+      <input type="number" name="nik" required>
+
+      <label>No Kartu Keluarga</label>
+      <input type="number" name="nokk" required>
+
+      <label>Agama</label>
+      <input type="text" name="agama" required>
+
+      <label>Nama Ayah</label>
+      <input type="text" name="nama_ayah" required>
+
+      <label>Nama Ibu</label>
+      <input type="text" name="nama_ibu" required>
+
+      <label>Pekerjaan Ayah</label>
+      <input type="text" name="pekerjaan_ayah" required>
+
+      <label>Pekerjaan Ibu</label>
+      <input type="text" name="pekerjaan_ibu" required>
+
+      <label>Nomor WhatsApp</label>
+      <input type="tel" name="hp" required>
+
+      <label>Email Aktif</label>
+      <input type="email" name="email" required>
+
+      <p>Dokumen yang harus dibawa ketika sudah mendaftar:</p>
+      <ul type="1">
+        <li>Fotokopi Kartu Keluarga</li>
+        <li>Fotokopi Akta Kelahiran Anak (pendaftar)</li>
+        <li>Uang Pendaftaran</li>
+      </ul>
+
+      <div class="form-buttons">
+        <button type="submit">Kirim</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+    </form>
+
+    <!-- Pesan Terima Kasih -->
+    <div id="thankyou_message" style="display: none;">
+      <h2>Terima kasih! Data Anda telah berhasil dikirim.</h2>
+      <p>Kami akan segera menghubungi Anda melalui WhatsApp atau email.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 TK Miftahul Alaliyah. Seluruh hak cipta dilindungi.</p>
+    </footer>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script>
+    function validateForm() {
+      return true;
+    }
+
+    // Redirect ke halaman terima kasih (jika disetting dari backend)
+    if (window.location.search.includes("success=true")) {
+      window.location.href = "terimakasih.html";
+    }
+  </script>
+
+</body>
+</html>
